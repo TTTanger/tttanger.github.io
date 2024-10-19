@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Notes</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+  <link href="styles/style.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <button>切换用户</button>
+      <nav>
+        <a href="#home.html" onclick="loadPage('home')">首页</a>
+        <a href="#notes.html" onclick="loadPage('notes')">笔记</a>
+        <a href="#albums.html" onclick="loadPage('albums')">相册</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="content">
+    <h1>My Notes</h1>
+    <div id="markdown-content"></div>
+  </div>
+</body>
+</html>
