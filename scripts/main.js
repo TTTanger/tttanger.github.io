@@ -91,7 +91,7 @@ myButton.onclick = function () {
 // 根据页面名称加载对应的内容
 function loadPage(page) {
   switch (page) {
-    case 'home':
+    case 'index':
       window.location.href = 'index.html';
       break;
     case 'notes':
