@@ -64,7 +64,7 @@ function setWelcomeMessage(name) {
 
   let headingElement;
 
-  if (currentPath.endsWith('home.html')) {
+  if (currentPath.endsWith('index.html')) {
     headingElement = document.getElementById("home_h1");
   } 
   if (headingElement) {
@@ -92,7 +92,7 @@ myButton.onclick = function () {
 function loadPage(page) {
   switch (page) {
     case 'home':
-      window.location.href = 'home.html';
+      window.location.href = 'index.html';
       break;
     case 'notes':
       window.location.href = 'notes.html';
