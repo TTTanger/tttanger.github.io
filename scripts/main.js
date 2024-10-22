@@ -88,100 +88,12 @@ myButton.onclick = function () {
   setUserName();
 };
 
-// 根据页面名称加载对应的内容
-function loadPage(page) {
-  switch (page) {
-    case 'index':
-      window.location.href = 'index.html';
-      break;
-    case 'notes':
-      window.location.href = 'notes.html';
-      break;
-    case 'albums':
-      window.location.href = 'albums.html';
-      break;
-    default:
-      console.error('Unknown page:', page);
-  }
-}
-
-// 加载 Markdown 笔记
-function loadMarkdownNotes() {
-  fetch('notes.md')
-    .then(response => response.text())
-    .then(text => {
-      const markdownContent = document.getElementById('markdown-content');
-      markdownContent.innerHTML = marked.parse(text);
-    })
-    .catch(error => {
-      console.error('Error loading Markdown file:', error);
-    });
-}
-
-// 加载相册集
-function loadAlbums() {
-  const albumContainer = document.getElementById('album-container');
-  const albums = [
-    { title: '小埋', images: ['/images/小埋1.png', '/images/小埋2.jpeg'] },
-    { title: '乐器展', images: ["/images/instrument_expo/IMG_9464.JPG",
-    "/images/instrument_expo/IMG_9465.JPG",
-    "/images/instrument_expo/IMG_9466.JPG",
-    "/images/instrument_expo/IMG_9467.JPG",
-    "/images/instrument_expo/IMG_9468.JPG",
-    "/images/instrument_expo/IMG_9469.JPG",
-    "/images/instrument_expo/IMG_9473.JPG",
-    "/images/instrument_expo/IMG_9474.JPG",
-    "/images/instrument_expo/IMG_9476.JPG",
-    "/images/instrument_expo/IMG_9477.JPG",
-    "/images/instrument_expo/IMG_9478.JPG",
-    "/images/instrument_expo/IMG_9479.JPG",
-    "/images/instrument_expo/IMG_9484.JPG",
-    "/images/instrument_expo/IMG_9485.JPG",
-    "/images/instrument_expo/IMG_9486.JPG",
-    "/images/instrument_expo/IMG_9487.JPG",
-    "/images/instrument_expo/IMG_9489.JPG",
-    "/images/instrument_expo/IMG_9490.JPG",
-    "/images/instrument_expo/IMG_9491.JPG",
-    "/images/instrument_expo/IMG_9492.JPG",
-    "/images/instrument_expo/IMG_9493.JPG",
-    "/images/instrument_expo/IMG_9494.JPG"] } // 初始为空，稍后从后端获取
-  ];
-
-  albums.forEach(album => {
-    const albumDiv = document.createElement('div');
-    albumDiv.classList.add('album-set');
-    albumDiv.innerHTML = `
-      <h2>${album.title}</h2>
-      <img src="${album.images[0]}" alt="${album.title}封面" class="album-cover">
-    `;
-    albumDiv.addEventListener('click', () => showAlbum(album));
-    albumContainer.appendChild(albumDiv);
-
+function handleMenuClick(event, sectionId) {
+  event.preventDefault(); // 阻止默认的链接跳转行为
+  document.querySelectorAll('.menu-bar a').forEach(item => {
+      item.classList.remove('active'); // 移除所有激活状态
   });
-}
-
-// 显示相册集
-function showAlbum(album) {
-  const modal = document.getElementById('modal');
-  const modalImages = document.getElementById('modal-images');
-  modalImages.innerHTML = '';
-
-  album.images.forEach(imageSrc => {
-    const img = document.createElement('img');
-    img.src = imageSrc;
-    img.classList.add('modal-image');
-    modalImages.appendChild(img);
-  });
-
-  modal.style.display = 'block';
-}
-
-// 关闭模态框
-function closeModal() {
-  const modal = document.getElementById('modal');
-  if (modal) {
-    modal.style.display = 'none';
-  } else {
-    console.error('Modal not found');
-  }
+  event.target.classList.add('active'); // 为当前点击的链接添加激活状态
+  // 这里可以添加更多的逻辑，比如根据sectionId显示不同的内容
+  console.log('Menu item clicked: ' + sectionId);
 }
