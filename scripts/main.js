@@ -123,28 +123,7 @@ function loadAlbums() {
   const albumContainer = document.getElementById('album-container');
   const albums = [
     { title: '小埋', images: ['/images/小埋1.png', '/images/小埋2.jpeg'] },
-    { title: '乐器展', images: ["/images/instrument_expo/IMG_9464.JPG",
-    "/images/instrument_expo/IMG_9465.JPG",
-    "/images/instrument_expo/IMG_9466.JPG",
-    "/images/instrument_expo/IMG_9467.JPG",
-    "/images/instrument_expo/IMG_9468.JPG",
-    "/images/instrument_expo/IMG_9469.JPG",
-    "/images/instrument_expo/IMG_9473.JPG",
-    "/images/instrument_expo/IMG_9474.JPG",
-    "/images/instrument_expo/IMG_9476.JPG",
-    "/images/instrument_expo/IMG_9477.JPG",
-    "/images/instrument_expo/IMG_9478.JPG",
-    "/images/instrument_expo/IMG_9479.JPG",
-    "/images/instrument_expo/IMG_9484.JPG",
-    "/images/instrument_expo/IMG_9485.JPG",
-    "/images/instrument_expo/IMG_9486.JPG",
-    "/images/instrument_expo/IMG_9487.JPG",
-    "/images/instrument_expo/IMG_9489.JPG",
-    "/images/instrument_expo/IMG_9490.JPG",
-    "/images/instrument_expo/IMG_9491.JPG",
-    "/images/instrument_expo/IMG_9492.JPG",
-    "/images/instrument_expo/IMG_9493.JPG",
-    "/images/instrument_expo/IMG_9494.JPG"] } // 初始为空，稍后从后端获取
+    { title: '乐器展', images: ["/images/instrument_expo/IMG_9464.JPG",] } 
   ];
 
   albums.forEach(album => {
