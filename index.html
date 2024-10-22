@@ -1,34 +1,42 @@
 <!doctype html>
 <html lang="en-US">
-  <head>
-  <button>切换用户</button>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Home Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+  <link href="styles/style.css" rel="stylesheet" />
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <button>切换用户</button>
+      <nav>
+        <a href="#index.html" onclick="loadPage('index')">Home</a>
+        <a href="#notes.html" onclick="loadPage('notes')">Notes</a>
+        <a href="#albums.html" onclick="loadPage('albums')">Albums</a>
+      </nav>
+    </div>
+  </header>
 
-    <script src="scripts/main.js" defer></script>
-
-
-    <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans"
-    rel="stylesheet" />
-
-    <link href="styles/style.css" rel="stylesheet" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>My test page</title>
-  </head>
-  <body>
-    <h1>Home Page</h1>
+  <div id="content">
+    <h1 id="home_h1">Home Page</h1>
     <img src="images/小埋1.png" alt="小埋1.png" style="width: 25%; height: auto;">
-    <h2> Hello! Here is Tanger!</h2>
-  </body>
-
-  <p>I am Tanger. I like</p>
-
-<ul>
-  <li>guitars</li>
-  <li>money</li>
-  <li>basketball</li>
-</ul>
-
-<p>Contact me!</p>
-
+    <h2>Hello! Here is Tanger!</h2>
+    <p>I am Tanger. I like</p>
+    <ul>
+      <li>Guitars</li>
+      <li>Money</li>
+      <li>Basketball</li>
+    </ul>
+    <h4>How to contact me?</h4>
+    <ul>
+      <li>QQ: 1340543463</li>
+      <li>E-Mail: tangerluo@qq.com</li>
+      <li>Address: 999 Haisi Road, East China University of Science and Technology (ECUST), Shanghai, China</li>
+    </ul>
+    <p>Looking forward to your Hola!</p>
+  </div>
+</body>
 </html>

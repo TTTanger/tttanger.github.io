@@ -122,7 +122,7 @@ function loadMarkdownNotes() {
 function loadAlbums() {
   const albumContainer = document.getElementById('album-container');
   const albums = [
-    { title: '小埋', images: ['/images/小埋1.png', '/images/小埋2.jpeg'] },
+    { title: '小埋', images: ['/images/小埋1.png', '/images/小埋2.jpeg', '/images/小埋3.jpeg'] },
     { title: '乐器展', images: ["/images/instrument_expo/IMG_9464.JPG",] } 
   ];
 
